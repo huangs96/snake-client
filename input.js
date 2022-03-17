@@ -1,3 +1,5 @@
+const { connect } = require("http2");
+
 let connection;
 
 const setupInput = (conn) => {
@@ -9,26 +11,26 @@ const setupInput = (conn) => {
   stdin.on("data", handleUserInput);
 }
 const handleUserInput = function (input) {
-        if (data === '\u0003') {
+        if (input === '\u0003') {
           process.exit();
         }
         if (input === 'w') {
-          conn.write('Move: up') 
+          connection.write('Move: up') 
         }
         if (input === 'a') {
-          conn.write('Move: left')
+          connection.write('Move: left')
         }
         if (input === 's') {
-          conn.write('Move: down')
+          connection.write('Move: down')
         }
         if (input === 'd') {
-          conn.write('Move: right')
+          connection.write('Move: right')
         }
         if (input === 'q') {
-          conn.write('Say: too slow')
+          connection.write('Say: too slow')
         }
         if (input === 'g') {
-          conn.write('Say: I like yo cut g')
+          connection.write('Say: I like yo cut g')
         }
       };
 
