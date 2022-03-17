@@ -15,8 +15,25 @@ const connect = () => {
     conn.write('Name: SH');
   })
 
+  // conn.on("connect", () => {
+  //   setTimeout(() => { conn.write('Move: right')
+  // }, 2000)}); 
+
+  // conn.on("connect", () => {
+  //   setTimeout(() => { conn.write('Move: down')
+  // }, 4000)}); 
+
+  // conn.on("connect", () => {
+  //   setTimeout(() => { conn.write('Move: left')
+  // }, 6000)}); 
+
+  // conn.on("connect", () => {
+  //   setTimeout(() => { conn.write('Move: up')
+  // }, 8000)}); 
+  
+
   return conn;
-};
+  };
 
 console.log("Connecting ...");
 connect();
